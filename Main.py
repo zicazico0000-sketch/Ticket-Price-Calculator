@@ -5,9 +5,18 @@ member=input("are you a member : yes or no ")
 discount= float
 
 if member == "yes" :
-    discount=ticket_price* 1/10
+        member_discount=total_price* 0.1
+else:
+        member_discount=0
+
+if total_price >= 1000:
+    discount=total_price* 0.2
+    member_discount=0
 else:
     discount=0
-    
-price=ticket_price-discount
+
+all_discount=member_discount+discount
+
+price=total_price-all_discount
 print(price)
+
